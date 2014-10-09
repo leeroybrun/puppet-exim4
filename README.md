@@ -8,7 +8,7 @@ include exim4
 
 exim4::config { 'default':
     configtype = 'internet',
-    other_hostnames = 'UNSET',
+    other_hostnames = 'li924-974.members.linode.com; localhost',
     local_interfaces = '127.0.0.1; ::1',
     readhost = '',
     relay_domains = '',
