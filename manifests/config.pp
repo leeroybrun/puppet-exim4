@@ -30,7 +30,7 @@ define exim4::config (
     }
 
     exec { "update-exim4.conf":
-        command => "update-exim4.conf"
+        command => "/usr/sbin/update-exim4.conf"
     }
 
 }
