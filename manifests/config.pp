@@ -1,6 +1,6 @@
 define exim4::config (
     $configtype = 'internet',
-    $other_hostnames = 'UNSET',
+    $other_hostnames_tmp = 'UNSET',
     $local_interfaces = '127.0.0.1; ::1',
     $readhost = '',
     $relay_domains = '',
@@ -13,8 +13,11 @@ define exim4::config (
     $localdelivery = 'maildir_home'
 ) {
 
-    if $other_hostnames == 'UNSET' {
+    if $other_hostnames_tmp == 'UNSET' {
         $other_hostnames = "$fqdn; localhost"
+    }
+    else {
+        $other_hostnames = $other_hostnames_tmp
     }
 
     file { '/etc/exim4/update-exim4.conf.conf':
