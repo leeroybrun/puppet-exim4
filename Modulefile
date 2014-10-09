@@ -1,5 +1,5 @@
 name 'leeroybrun-exim4'
-version '1.0.1'
+version '1.0.2'
 source 'git://github.com/leeroybrun/puppet-exim4'
 author 'Leeroy Brun'
 license 'MIT'
